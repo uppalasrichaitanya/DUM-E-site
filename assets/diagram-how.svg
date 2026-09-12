@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="how-title how-desc" shape-rendering="crispEdges">
+  <title id="how-title">How DUM-E works</title>
+  <desc id="how-desc">You set the mission. DUM-E reads shared state and delegates to real coding-agent terminals. Memory and mailboxes wire in on the left, the task board and fleet state on the right, and four engine workers sit below.</desc>
+  <defs>
+    <marker id="how-arrow-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1320" />
+    </marker>
+  </defs>
+
+  <!-- Panel recipe: outer ink, middle cream or reactor, inner ink.
+       Everything sits on the 4px grid. Packet motion lives in styles.css so
+       the envelopes ride the real route paths; this file is the static source. -->
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+
+    <!-- YOU — the human, hard-hatted, at the terminal -->
+    <g>
+      <rect x="460" y="12" width="280" height="84" fill="#1A1320" />
+      <rect x="464" y="16" width="272" height="76" fill="#FFF8E7" />
+      <rect x="468" y="20" width="264" height="68" fill="none" stroke="#1A1320" stroke-width="2" />
+      <circle cx="478" cy="30" r="3" fill="#6BCF7F" />
+      <circle cx="722" cy="30" r="3" fill="#6BCF7F" />
+      <path d="M498 30 h20 v6 h6 v6 h-32 v-6 h6 v-6 z" fill="#F4D35E" stroke="#1A1320" stroke-width="2" />
+      <rect x="484" y="42" width="48" height="6" fill="#F4D35E" stroke="#1A1320" stroke-width="2" />
+      <rect x="488" y="52" width="40" height="30" fill="#04101E" stroke="#1A1320" stroke-width="2" />
+      <path d="M494 60 l6 5 l-6 5" fill="none" stroke="#F4D35E" stroke-width="3" />
+      <rect x="506" y="66" width="8" height="6" fill="#F4D35E" />
+      <text x="556" y="54" font-family="'Press Start 2P', 'Courier New', monospace" font-size="16" text-anchor="start" fill="#1A1320">YOU</text>
+      <text x="556" y="76" font-size="14" text-anchor="start" fill="#3D2E4A">sets the mission</text>
+    </g>
+    <line x1="600" y1="96" x2="600" y2="120" stroke="#1A1320" stroke-width="5" marker-end="url(#how-arrow-ink)" />
+
+    <!-- Left shared state. The connectors are two-headed: DUM-E reads and writes. -->
+    <g>
+      <rect x="36" y="170" width="276" height="104" fill="#1A1320" />
+      <rect x="40" y="174" width="268" height="96" fill="#FFF8E7" />
+      <rect x="44" y="178" width="260" height="88" fill="none" stroke="#1A1320" stroke-width="2" />
+      <rect x="56" y="206" width="28" height="32" fill="#4ECDC4" stroke="#1A1320" stroke-width="2" />
+      <text x="104" y="216" font-family="'Press Start 2P', 'Courier New', monospace" font-size="12" text-anchor="start" fill="#1A1320">memory.md</text>
+      <text x="104" y="242" font-size="14" text-anchor="start" fill="#3D2E4A">one memory per agent</text>
+      <line x1="312" y1="222" x2="426" y2="222" stroke="#1A1320" stroke-width="4" marker-start="url(#how-arrow-ink)" marker-end="url(#how-arrow-ink)" />
+      <circle class="how-led how-led--a" cx="369" cy="222" r="5" fill="#4ECDC4" stroke="#1A1320" stroke-width="2" />
+    </g>
+    <g>
+      <rect x="36" y="306" width="276" height="104" fill="#1A1320" />
+      <rect x="40" y="310" width="268" height="96" fill="#FFF8E7" />
+      <rect x="44" y="314" width="260" height="88" fill="none" stroke="#1A1320" stroke-width="2" />
+      <rect x="56" y="345" width="36" height="26" fill="#FFFDF5" stroke="#1A1320" stroke-width="2" />
+      <path d="M56 345 l18 13 l18 -13" fill="none" stroke="#1A1320" stroke-width="2" />
+      <text x="104" y="352" font-family="'Press Start 2P', 'Courier New', monospace" font-size="12" text-anchor="start" fill="#1A1320">inbox / outbox</text>
+      <text x="104" y="378" font-size="14" text-anchor="start" fill="#3D2E4A">routed every 1.5s</text>
+      <line x1="312" y1="358" x2="426" y2="358" stroke="#1A1320" stroke-width="4" marker-start="url(#how-arrow-ink)" marker-end="url(#how-arrow-ink)" />
+      <circle class="how-led how-led--b" cx="369" cy="358" r="5" fill="#4D9BE8" stroke="#1A1320" stroke-width="2" />
+    </g>
+
+    <!-- DUM-E — the real cast portrait standing in an arc-reactor ring.
+         The portrait is a data URI because this file ships through <img>, where
+         an external reference would not resolve. See BUILD-NOTES §5. -->
+    <g>
+      <rect x="430" y="124" width="340" height="296" fill="#1A1320" />
+      <rect x="434" y="128" width="332" height="288" fill="#266FD6" />
+      <rect x="438" y="132" width="324" height="280" fill="none" stroke="#1A1320" stroke-width="2" />
+      <rect x="492" y="140" width="216" height="204" fill="#04101E" stroke="#1A1320" stroke-width="2" />
+      <g fill="none" shape-rendering="geometricPrecision">
+        <circle cx="600" cy="242" r="92" stroke="#0C3878" stroke-width="8" />
+        <circle cx="600" cy="242" r="92" stroke="#4D9BE8" stroke-width="8" stroke-dasharray="20 16" opacity="0.85" />
+        <circle cx="600" cy="242" r="72" stroke="#4D9BE8" stroke-width="2" opacity="0.5" />
+        <circle class="how-scope" cx="600" cy="242" r="98" stroke="#F4D35E" stroke-width="3" stroke-dasharray="12 10" opacity="0.75" />
+      </g>
+      <image class="how-head" href="data:image/png;base64,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" x="552" y="146" width="96" height="192" image-rendering="pixelated" />
+      <circle class="how-led how-led--c" cx="452" cy="148" r="5" fill="#F4D35E" stroke="#1A1320" stroke-width="2" />
+      <circle class="how-led how-led--d" cx="748" cy="148" r="5" fill="#4D9BE8" stroke="#1A1320" stroke-width="2" />
+      <text x="600" y="376" font-family="'Press Start 2P', 'Courier New', monospace" font-size="24" letter-spacing="2" fill="#FFFDF5">DUM-E</text>
+      <text x="600" y="402" font-size="15" letter-spacing="2" fill="#FFF8E7">ORCHESTRATOR</text>
+    </g>
+
+    <!-- Right shared state -->
+    <g>
+      <rect x="888" y="170" width="276" height="104" fill="#1A1320" />
+      <rect x="892" y="174" width="268" height="96" fill="#FFF8E7" />
+      <rect x="896" y="178" width="260" height="88" fill="none" stroke="#1A1320" stroke-width="2" />
+      <rect x="908" y="198" width="36" height="48" fill="#F4E9C7" stroke="#1A1320" stroke-width="2" />
+      <rect x="916" y="206" width="20" height="10" fill="#FF6B6B" />
+      <rect x="916" y="220" width="20" height="10" fill="#FFD93D" />
+      <rect x="916" y="234" width="20" height="10" fill="#6BCF7F" />
+      <text x="956" y="216" font-family="'Press Start 2P', 'Courier New', monospace" font-size="12" text-anchor="start" fill="#1A1320">tasks.json</text>
+      <text x="956" y="242" font-size="14" text-anchor="start" fill="#3D2E4A">shared kanban</text>
+      <line x1="770" y1="222" x2="884" y2="222" stroke="#1A1320" stroke-width="4" marker-start="url(#how-arrow-ink)" marker-end="url(#how-arrow-ink)" />
+    </g>
+    <g>
+      <rect x="888" y="306" width="276" height="104" fill="#1A1320" />
+      <rect x="892" y="310" width="268" height="96" fill="#FFF8E7" />
+      <rect x="896" y="314" width="260" height="88" fill="none" stroke="#1A1320" stroke-width="2" />
+      <rect x="908" y="336" width="36" height="44" fill="#04101E" stroke="#1A1320" stroke-width="2" />
+      <rect x="916" y="344" width="20" height="6" fill="#4D9BE8" />
+      <rect x="916" y="354" width="14" height="6" fill="#F4D35E" />
+      <rect x="916" y="364" width="20" height="6" fill="#6BCF7F" />
+      <text x="956" y="352" font-family="'Press Start 2P', 'Courier New', monospace" font-size="12" text-anchor="start" fill="#1A1320">fleet.json</text>
+      <text x="956" y="378" font-size="14" text-anchor="start" fill="#3D2E4A">tokens and status</text>
+      <line x1="770" y1="358" x2="884" y2="358" stroke="#1A1320" stroke-width="4" marker-start="url(#how-arrow-ink)" marker-end="url(#how-arrow-ink)" />
+    </g>
+
+    <!-- Worker engines. OpenCode is the shipped default orchestrator
+         (renderer: OnboardingWizard godProvider default). -->
+    <g font-family="'JetBrains Mono', monospace">
+      <g>
+        <rect x="52" y="480" width="256" height="104" fill="#1A1320" />
+        <rect x="56" y="484" width="248" height="96" fill="#FFF8E7" />
+        <rect x="60" y="488" width="240" height="88" fill="none" stroke="#1A1320" stroke-width="2" />
+        <rect x="76" y="508" width="28" height="28" fill="#FFA07A" stroke="#1A1320" stroke-width="2" />
+        <text x="180" y="524" font-family="'Press Start 2P', 'Courier New', monospace" font-size="14" fill="#1A1320">QWEN</text>
+        <rect x="128" y="540" width="104" height="24" fill="#FFF8E7" stroke="#1A1320" stroke-width="2" />
+        <text x="180" y="557" font-size="13" fill="#1A1320">SUPPORTED</text>
+      </g>
+      <g>
+        <rect x="332" y="480" width="256" height="104" fill="#1A1320" />
+        <rect x="336" y="484" width="248" height="96" fill="#FFF8E7" />
+        <rect x="340" y="488" width="240" height="88" fill="none" stroke="#1A1320" stroke-width="2" />
+        <rect x="356" y="508" width="28" height="28" fill="#4ECDC4" stroke="#1A1320" stroke-width="2" />
+        <text x="460" y="524" font-family="'Press Start 2P', 'Courier New', monospace" font-size="14" fill="#1A1320">CLAUDE</text>
+        <rect x="408" y="540" width="104" height="24" fill="#FFF8E7" stroke="#1A1320" stroke-width="2" />
+        <text x="460" y="557" font-size="13" fill="#1A1320">SUPPORTED</text>
+      </g>
+      <g>
+        <rect x="612" y="480" width="256" height="104" fill="#1A1320" />
+        <rect x="616" y="484" width="248" height="96" fill="#FFF8E7" />
+        <rect x="620" y="488" width="240" height="88" fill="none" stroke="#1A1320" stroke-width="2" />
+        <rect x="636" y="508" width="28" height="28" fill="#B197FC" stroke="#1A1320" stroke-width="2" />
+        <text x="740" y="524" font-family="'Press Start 2P', 'Courier New', monospace" font-size="14" fill="#1A1320">CODEX</text>
+        <rect x="688" y="540" width="104" height="24" fill="#FFF8E7" stroke="#1A1320" stroke-width="2" />
+        <text x="740" y="557" font-size="13" fill="#1A1320">BRIDGED</text>
+      </g>
+      <g>
+        <rect x="892" y="480" width="256" height="104" fill="#1A1320" />
+        <rect x="896" y="484" width="248" height="96" fill="#FFF8E7" />
+        <rect x="900" y="488" width="240" height="88" fill="none" stroke="#1A1320" stroke-width="2" />
+        <rect x="916" y="508" width="28" height="28" fill="#F4D35E" stroke="#1A1320" stroke-width="2" />
+        <text x="1020" y="524" font-family="'Press Start 2P', 'Courier New', monospace" font-size="14" fill="#1A1320">OPENCODE</text>
+        <rect x="968" y="540" width="104" height="24" fill="#1A1320" />
+        <text x="1020" y="557" font-size="13" fill="#F4D35E">DEFAULT</text>
+      </g>
+    </g>
+
+    <!-- Delegation routes: DUM-E to each engine, arrowheads at the card. -->
+    <g fill="none" stroke="#266FD6" stroke-width="7" opacity="0.22">
+      <path d="M520 420 L520 450 L180 450 L180 476" />
+      <path d="M560 420 L560 450 L460 450 L460 476" />
+      <path d="M640 420 L640 450 L740 450 L740 476" />
+      <path d="M680 420 L680 450 L1020 450 L1020 476" />
+    </g>
+    <g fill="none" stroke="#1A1320" stroke-width="4">
+      <path id="how-route-qwen" d="M520 420 L520 450 L180 450 L180 476" marker-end="url(#how-arrow-ink)" />
+      <path id="how-route-claude" d="M560 420 L560 450 L460 450 L460 476" marker-end="url(#how-arrow-ink)" />
+      <path id="how-route-codex" d="M640 420 L640 450 L740 450 L740 476" marker-end="url(#how-arrow-ink)" />
+      <path id="how-route-opencode" d="M680 420 L680 450 L1020 450 L1020 476" marker-end="url(#how-arrow-ink)" />
+    </g>
+
+    <!-- Arrival pulses sit at each card mouth, then the envelopes that reach them. -->
+    <g fill="none" stroke="#F4D35E" stroke-width="3">
+      <rect class="how-pulse how-pulse--1" x="166" y="456" width="28" height="22" />
+      <rect class="how-pulse how-pulse--2" x="446" y="456" width="28" height="22" />
+      <rect class="how-pulse how-pulse--3" x="726" y="456" width="28" height="22" />
+      <rect class="how-pulse how-pulse--4" x="1006" y="456" width="28" height="22" />
+    </g>
+    <g>
+      <g class="how-packet how-packet--1">
+        <rect x="512" y="422" width="16" height="12" fill="#F4D35E" stroke="#1A1320" stroke-width="2" />
+        <path d="M512 422 l8 6 l8 -6" fill="none" stroke="#1A1320" stroke-width="2" />
+      </g>
+      <g class="how-packet how-packet--2">
+        <rect x="552" y="422" width="16" height="12" fill="#F4D35E" stroke="#1A1320" stroke-width="2" />
+        <path d="M552 422 l8 6 l8 -6" fill="none" stroke="#1A1320" stroke-width="2" />
+      </g>
+      <g class="how-packet how-packet--3">
+        <rect x="632" y="422" width="16" height="12" fill="#F4D35E" stroke="#1A1320" stroke-width="2" />
+        <path d="M632 422 l8 6 l8 -6" fill="none" stroke="#1A1320" stroke-width="2" />
+      </g>
+      <g class="how-packet how-packet--4">
+        <rect x="672" y="422" width="16" height="12" fill="#F4D35E" stroke="#1A1320" stroke-width="2" />
+        <path d="M672 422 l8 6 l8 -6" fill="none" stroke="#1A1320" stroke-width="2" />
+      </g>
+    </g>
+  </g>
+</svg>

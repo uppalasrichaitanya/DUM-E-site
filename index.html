@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>DUM-E — The Agent Hub for the Lab</title>
+<meta name="description" content="DUM-E coordinates real coding-agent terminals into a local-first robot team with shared memory, mailboxes, tasks, and a visual workshop floor.">
+
+<!-- Canonical: PLACEHOLDER. Replace with the real host before publishing
+     (spec §11) and update og:url / og:image to match. -->
+<link rel="canonical" href="https://uppalasrichaitanya.github.io/DUM-E/">
+
+<meta name="theme-color" content="#04101E">
+<meta name="color-scheme" content="dark light">
+
+<link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/brand/icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DUM-E">
+<meta property="og:title" content="DUM-E — The Agent Hub for the Lab">
+<meta property="og:description" content="DUM-E coordinates real coding-agent terminals into a local-first robot team with shared memory, mailboxes, tasks, and a visual workshop floor.">
+<meta property="og:url" content="https://uppalasrichaitanya.github.io/DUM-E/">
+<meta property="og:image" content="https://uppalasrichaitanya.github.io/DUM-E/assets/social/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DUM-E — the arm that runs the lab. Pixel-art workshop control system.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DUM-E — The Agent Hub for the Lab">
+<meta name="twitter:description" content="DUM-E coordinates real coding-agent terminals into a local-first robot team with shared memory, mailboxes, tasks, and a visual workshop floor.">
+<meta name="twitter:image" content="https://uppalasrichaitanya.github.io/DUM-E/assets/social/og.png">
+
+<link rel="preload" href="assets/fonts/press-start-2p-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/screenshots/hero-command-center.webp" as="image" type="image/webp">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DUM-E",
+  "alternateName": "DUM-E — The Agent Hub for the Lab",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "Coding agent orchestrator",
+  "operatingSystem": "Windows 10+ x64, Linux",
+  "softwareVersion": "0.1.1",
+  "description": "DUM-E coordinates real coding-agent terminals into a local-first robot team with shared memory, mailboxes, tasks, and a visual workshop floor.",
+  "license": "https://github.com/uppalasrichaitanya/DUM-E/blob/dum-e/LICENSE",
+  "codeRepository": "https://github.com/uppalasrichaitanya/DUM-E",
+  "downloadUrl": "https://github.com/uppalasrichaitanya/DUM-E/releases/latest",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#what">Skip to content</a>
+
+<!-- ═══ 1. STICKY NAVIGATION ═══════════════════════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="nav__brand" href="#top" aria-label="DUM-E — back to top">
+      <img class="nav__logo" src="assets/brand/logo.svg" width="32" height="32" alt="">
+      <span class="nav__word">DUM-E</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#cast">The cast</a>
+      <a href="#floor">Screenshots</a>
+      <a href="#requirements">Requirements</a>
+      <a href="https://github.com/uppalasrichaitanya/DUM-E">GitHub</a>
+    </nav>
+
+    <a class="btn btn--sm btn--primary nav__cta" href="https://github.com/uppalasrichaitanya/DUM-E/releases/latest">Download</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══ 2. HERO ════════════════════════════════════════════════════════ -->
+<section class="band band--dark hero" id="top">
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="gridmarks" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <div class="hero__top">
+
+      <div class="hero__copy">
+        <p class="eyebrow">WORKSHOP CONTROL SYSTEM <span class="eyebrow__v">v0.1.1</span></p>
+
+        <h1 class="hero__h1">
+          <span class="hero__word">DUM-E</span>
+          <span class="hero__line">The arm that runs the lab.</span>
+        </h1>
+
+        <p class="hero__sub">Spawn coding agents, give each one memory and a mailbox, and let DUM-E run the floor.</p>
+        <p class="hero__sub2">Real terminals. Shared tasks. A robot floor you can supervise.</p>
+
+        <div class="hero__act">
+          <a class="btn btn--primary btn--lg" href="https://github.com/uppalasrichaitanya/DUM-E/releases/latest">
+            <span class="btn__ico" aria-hidden="true"></span>Download for Windows
+          </a>
+          <span class="hero__links">
+            <a href="#floor">See it in action</a>
+            <span class="sep" aria-hidden="true">·</span>
+            <a href="https://github.com/uppalasrichaitanya/DUM-E">View source</a>
+          </span>
+        </div>
+
+        <p class="hero__micro">Free to use. Unsigned build. Windows will ask you to trust it once.</p>
+
+        <ul class="chips" aria-label="At a glance">
+          <li class="chip">Windows 10+</li>
+          <li class="chip">MIT</li>
+          <li class="chip chip--gold">Local-first</li>
+          <li class="chip chip--gold">No telemetry</li>
+          <li class="chip">Qwen / Claude / Codex / OpenCode</li>
+        </ul>
+      </div>
+
+      <!-- Arc reactor: the app's own boot-splash motif, procedural.
+           Decorative — the hero reads identically with it hidden. -->
+      <div class="reactor" aria-hidden="true">
+        <span class="reactor__halo"></span>
+        <span class="reactor__ring reactor__r1"></span>
+        <span class="reactor__ring reactor__r2"></span>
+        <span class="reactor__frame"></span>
+        <span class="reactor__sparks"><i></i><i></i><i></i><i></i></span>
+        <img class="reactor__core" src="assets/brand/logo.svg" width="72" height="72" alt="">
+        <span class="reactor__tick reactor__tick--a">PWR</span>
+        <span class="reactor__tick reactor__tick--b">RTR 01</span>
+      </div>
+    </div>
+
+    <!-- Hero visual -->
+    <figure class="shot shot--hero">
+      <div class="shot__bezel">
+        <p class="readout">
+          <span class="vh">Illustrative floor readout: </span>
+          <span class="readout__i"><i class="led led--on" aria-hidden="true"></i>DUM-E ONLINE</span>
+          <span class="readout__i"><i class="led led--gold" aria-hidden="true"></i>3 WORKERS ACTIVE</span>
+          <span class="readout__i"><i class="led led--on" aria-hidden="true"></i>TASK BOARD SYNCED</span>
+          <span class="readout__i"><i class="led led--sky" aria-hidden="true"></i>MAIL ROUTE STABLE</span>
+        </p>
+        <picture>
+          <source srcset="assets/screenshots/hero-command-center.webp" type="image/webp">
+          <img src="assets/screenshots/hero-command-center.png" width="1280" height="652" fetchpriority="high" decoding="async"
+               alt="The DUM-E desktop app at version 0.1.1. Left: the workshop floor, a dark blue tiled lab where pixel robots walk between desks with speech labels like &quot;heading to board&quot; and &quot;updating the todo board&quot;. Right: the Command Center panel with terminal, monitor, tasks, memory and graph tabs and a live pty session. Along the bottom: a roster strip showing DUM-E idle plus H.E.R.B.I.E, Vision, Ultron, MODOK, VERONICA and Rover working.">
+        </picture>
+      </div>
+      <figcaption>The floor is the interface. Watch the work move.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ═══ 3. WHAT IT IS ══════════════════════════════════════════════════ -->
+<section class="band band--light" id="what">
+  <div class="wrap">
+    <p class="plaque"><i class="led led--on" aria-hidden="true"></i><span class="plaque__id">#what</span> WHAT IT IS</p>
+    <h2 class="h2">Three things, and no chat wrapper.</h2>
+
+    <div class="trio">
+      <article class="panel card">
+        <div class="card__art card__art--term">
+          <svg class="ico" viewBox="0 0 16 16" width="48" height="48" aria-hidden="true" shape-rendering="crispEdges">
+            <rect x="1" y="2" width="14" height="11" fill="#04101E"/>
+            <rect x="2" y="3" width="12" height="9" fill="#0C3878"/>
+            <rect x="3" y="4" width="10" height="7" fill="#04101E"/>
+            <rect x="4" y="5" width="2" height="1" fill="#4D9BE8"/>
+            <rect x="7" y="5" width="4" height="1" fill="#6BCF7F"/>
+            <rect x="4" y="7" width="5" height="1" fill="#4D9BE8"/>
+            <rect x="4" y="9" width="2" height="1" fill="#F4D35E"/>
+            <rect x="5" y="13" width="6" height="1" fill="#1A1320"/>
+            <rect x="3" y="14" width="10" height="1" fill="#1A1320"/>
+          </svg>
+          <p class="statusline"><i class="led led--on" aria-hidden="true"></i>live · pty pty-god<b class="caret" aria-hidden="true"></b></p>
+        </div>
+        <h3 class="card__h">Real terminals.</h3>
+        <p>Every robot runs a live CLI session. No simulated chat window.</p>
+      </article>
+
+      <article class="panel card">
+        <div class="card__art">
+          <svg class="ico" viewBox="0 0 16 16" width="48" height="48" aria-hidden="true" shape-rendering="crispEdges">
+            <rect x="1" y="3" width="14" height="10" fill="#1A1320"/>
+            <rect x="2" y="4" width="12" height="8" fill="#FFFDF5"/>
+            <path d="M2 4 h12 v1 h-1 v1 h-1 v1 h-1 v1 h-1 v1 h-4 v-1 h-1 v-1 h-1 v-1 h-1 v-1 h-1 z" fill="#4ECDC4"/>
+            <rect x="2" y="10" width="12" height="1" fill="#F4E9C7"/>
+            <rect x="11" y="9" width="4" height="4" fill="#1A1320"/>
+            <rect x="12" y="10" width="2" height="2" fill="#F4D35E"/>
+          </svg>
+          <ul class="filelist" aria-hidden="true">
+            <li>memory.md</li><li>inbox/</li><li>outbox/</li>
+          </ul>
+        </div>
+        <h3 class="card__h">Memory + mailboxes.</h3>
+        <p>Robots remember work, route messages, and share a task board.</p>
+      </article>
+
+      <article class="panel card">
+        <div class="card__art">
+          <svg class="ico" viewBox="0 0 16 16" width="48" height="48" aria-hidden="true" shape-rendering="crispEdges">
+            <rect x="6" y="1" width="4" height="1" fill="#1A1320"/>
+            <rect x="5" y="2" width="6" height="4" fill="#266FD6"/>
+            <rect x="6" y="3" width="4" height="2" fill="#04101E"/>
+            <rect x="6" y="3" width="1" height="1" fill="#F4D35E"/>
+            <rect x="9" y="3" width="1" height="1" fill="#F4D35E"/>
+            <rect x="7" y="6" width="2" height="2" fill="#1A1320"/>
+            <rect x="2" y="8" width="12" height="1" fill="#1A1320"/>
+            <rect x="2" y="9" width="1" height="2" fill="#1A1320"/>
+            <rect x="7" y="9" width="1" height="2" fill="#1A1320"/>
+            <rect x="13" y="9" width="1" height="2" fill="#1A1320"/>
+            <rect x="1" y="11" width="3" height="3" fill="#6BCF7F"/>
+            <rect x="6" y="11" width="3" height="3" fill="#FFD93D"/>
+            <rect x="12" y="11" width="3" height="3" fill="#B197FC"/>
+          </svg>
+          <p class="statusline statusline--plain" aria-hidden="true">you → DUM-E → the floor</p>
+        </div>
+        <h3 class="card__h">An orchestrator.</h3>
+        <p>DUM-E delegates the work while you supervise the floor.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 4. HOW IT WORKS ════════════════════════════════════════════════ -->
+<section class="band band--warm" id="how">
+  <div class="wrap">
+    <p class="plaque"><i class="led led--sky" aria-hidden="true"></i><span class="plaque__id">#how</span> ROUTING</p>
+    <h2 class="h2">You set the mission. DUM-E keeps the floor moving.</h2>
+
+    <div class="how">
+      <figure class="panel how__fig">
+        <div class="how__scroll" tabindex="0" role="group" aria-label="Architecture diagram, scrollable">
+          <!-- assets/diagram-how.svg, inlined so the message packets can be
+               driven by CSS (ASSET-PLAN §7). The file remains the source. -->
+          <svg class="diagram" viewBox="0 0 1200 640" role="img" aria-labelledby="how-title how-desc" shape-rendering="crispEdges">
+            <title id="how-title">How DUM-E works</title>
+            <desc id="how-desc">You set the mission. DUM-E reads shared state and delegates to real coding-agent terminals. Memory and mailboxes wire in on the left, the task board and fleet state on the right, and four engine workers sit below.</desc>
+            <defs>
+              <marker id="how-arrow-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                <path d="M0,0 L10,5 L0,10 z" fill="#1A1320"/>
+              </marker>
+            </defs>
+            <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+              <g>
+                <rect x="460" y="12" width="280" height="84" fill="#1A1320"/>
+                <rect x="464" y="16" width="272" height="76" fill="#FFF8E7"/>
+                <rect x="468" y="20" width="264" height="68" fill="none" stroke="#1A1320" stroke-width="2"/>
+                <circle cx="478" cy="30" r="3" fill="#6BCF7F"/>
+                <circle cx="722" cy="30" r="3" fill="#6BCF7F"/>
+                <path d="M498 30 h20 v6 h6 v6 h-32 v-6 h6 v-6 z" fill="#F4D35E" stroke="#1A1320" stroke-width="2"/>
+                <rect x="484" y="42" width="48" height="6" fill="#F4D35E" stroke="#1A1320" stroke-width="2"/>
+                <rect x="488" y="52" width="40" height="30" fill="#04101E" stroke="#1A1320" stroke-width="2"/>
+                <path d="M494 60 l6 5 l-6 5" fill="none" stroke="#F4D35E" stroke-width="3"/>
+                <rect x="506" y="66" width="8" height="6" fill="#F4D35E"/>
+                <text x="556" y="54" font-family="'Press Start 2P', 'Courier New', monospace" font-size="16" text-anchor="start" fill="#1A1320">YOU</text>
+                <text x="556" y="76" font-size="14" text-anchor="start" fill="#3D2E4A">sets the mission</text>
+              </g>
+              <line x1="600" y1="96" x2="600" y2="120" stroke="#1A1320" stroke-width="5" marker-end="url(#how-arrow-ink)"/>
+
+              <g>
+                <rect x="36" y="170" width="276" height="104" fill="#1A1320"/>
+                <rect x="40" y="174" width="268" height="96" fill="#FFF8E7"/>
+                <rect x="44" y="178" width="260" height="88" fill="none" stroke="#1A1320" stroke-width="2"/>
+                <rect x="56" y="206" width="28" height="32" fill="#4ECDC4" stroke="#1A1320" stroke-width="2"/>
+                <text x="104" y="216" font-family="'Press Start 2P', 'Courier New', monospace" font-size="12" text-anchor="start" fill="#1A1320">memory.md</text>
+                <text x="104" y="242" font-size="14" text-anchor="start" fill="#3D2E4A">one memory per agent</text>
+                <line x1="312" y1="222" x2="426" y2="222" stroke="#1A1320" stroke-width="4" marker-start="url(#how-arrow-ink)" marker-end="url(#how-arrow-ink)"/>
+                <circle class="how-led how-led--a" cx="369" cy="222" r="5" fill="#4ECDC4" stroke="#1A1320" stroke-width="2"/>
+              </g>
+              <g>
+                <rect x="36" y="306" width="276" height="104" fill="#1A1320"/>
+                <rect x="40" y="310" width="268" height="96" fill="#FFF8E7"/>
+                <rect x="44" y="314" width="260" height="88" fill="none" stroke="#1A1320" stroke-width="2"/>
+                <rect x="56" y="345" width="36" height="26" fill="#FFFDF5" stroke="#1A1320" stroke-width="2"/>
+                <path d="M56 345 l18 13 l18 -13" fill="none" stroke="#1A1320" stroke-width="2"/>
+                <text x="104" y="352" font-family="'Press Start 2P', 'Courier New', monospace" font-size="12" text-anchor="start" fill="#1A1320">inbox / outbox</text>
+                <text x="104" y="378" font-size="14" text-anchor="start" fill="#3D2E4A">routed every 1.5s</text>
+                <line x1="312" y1="358" x2="426" y2="358" stroke="#1A1320" stroke-width="4" marker-start="url(#how-arrow-ink)" marker-end="url(#how-arrow-ink)"/>
+                <circle class="how-led how-led--b" cx="369" cy="358" r="5" fill="#4D9BE8" stroke="#1A1320" stroke-width="2"/>
+              </g>
+              <g>
+                <rect x="430" y="124" width="340" height="296" fill="#1A1320"/>
+                <rect x="434" y="128" width="332" height="288" fill="#266FD6"/>
+                <rect x="438" y="132" width="324" height="280" fill="none" stroke="#1A1320" stroke-width="2"/>
+<rect x="492" y="140" width="216" height="204" fill="#04101E" stroke="#1A1320" stroke-width="2"/>
+                <g fill="none" shape-rendering="geometricPrecision">
+                  <circle cx="600" cy="242" r="92" stroke="#0C3878" stroke-width="8"/>
+                  <circle cx="600" cy="242" r="92" stroke="#4D9BE8" stroke-width="8" stroke-dasharray="20 16" opacity="0.85"/>
+                  <circle cx="600" cy="242" r="72" stroke="#4D9BE8" stroke-width="2" opacity="0.5"/>
+                  <circle class="how-scope" cx="600" cy="242" r="98" stroke="#F4D35E" stroke-width="3" stroke-dasharray="12 10" opacity="0.75"/>
+                </g>
+                <image class="how-head" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAAGACAYAAAD7823fAAAHBklEQVR42u3dMUpcURQG4GksIhJEQkgsBKewkJQWIikCSZVFTOMC7KdP4QqyB1vBPVgP6Brsp7B72cE9xc3lnvve98NfasZzzpfmMTOrlTTNj6vfU01NUAAQAUAEABEARAAQAUAEAJG8B77fbYqdpm2xX07OirUBAUAEABEARAAQAUAEABEARPICiAqAAACAAACAAACAAACAAACAAACAACCSF8DR9baqAAgAAAgAAAgAAAgAAAgAAAgAAAgAIu0OuLa1AFq/PhcAAAACAAACAAACAAACAAACAAACAAAy5wN+fH4r9ub+vaoXdy+pCxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJkPPFrw3A+4d71hBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBaAjj++bfYs9NvWlEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIDCB60HX88VQLBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgMwAHDEAACgAACgAACgAACgAACgAACgAACgAywUQZb/bVLX2AHu/PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgZQHQg07QttjWA3q8PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARgZQe4C937DS+vVFAKL9uGAAABAAABAAABAAABAAABAAABAAAHDgpYZfcOGDsdo2mK8HZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1ACIBgxAXwBRAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoOoNLwAAAAAAAAAAAAAAAAAAAAAAAAAAAADggAEAQAFYLhBH3BSAAwcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQzACiL5gY/Qsyql8/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALPhBWO0BpgcIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwbgDTEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4IIBAED6ATj8cKIVBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgMwALu5etKIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACAAACAAJCvB+vbYgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAzgKW39sABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgZ6IF1DY7wNZ/vwMHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA/i8gKwQQFABAARAEQAEAFABAARACTzgWVvbwCjzw8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgHkfuC+pWHZnDwQABQAABQAABQAABQAABQAABQAAAAYHEP0BD0+vxX799adpHVlde+8v/Rt+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYO4Ob+vdjH57diowVFvz/7z2dv6wMf/oO/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAo1oOw3F2db4oFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAzA+KogV9/rQeutn/gwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICe3e82xU7Ttmmjfz9q9vkCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAyABa/zwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0A5A7wMHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAkQHUfgHD0fVWOxYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABKdURj92B9WywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOCIAMgNIEr0B0SAVuebYmsfhEW/f/T2nk+0/+EPHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGDhAFo/aKt9UNN6ga2bfT4rAQAAAQAAAQAAAQAAAQAAAQAAAQAAGRiA+QBgweYDgAWbDwAWbD4AWLD5AGDB5gOABZuPC7Zg85F2C44W9PD0WuzcASx9PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzPtBWOsPdjIfACzYfACwYPMBwILNBwALNh8ALNh8ALBg83HBFmw+YsHmIxZsPmLB5iMWbD5iweYjFmw+YsHmIxZsPvL/D2DpCzQfAAAwHwAAMB8AADAfAAAwHwAAMB8AADAfAAAAwIIBAMCCAQDAggEAwIIBAMCCAQDAggEAwILNBwALNh8AMi6wd80n93wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMi9wMvL76nb+kGR+QAAgPkAAID5AACA+QAAgPkAAID5AACA+QAAAAAV+QdYUkmgogIV5wAAAABJRU5ErkJggg==" x="552" y="146" width="96" height="192" image-rendering="pixelated"/>
+                <circle class="how-led how-led--c" cx="452" cy="148" r="5" fill="#F4D35E" stroke="#1A1320" stroke-width="2"/>
+                <circle class="how-led how-led--d" cx="748" cy="148" r="5" fill="#4D9BE8" stroke="#1A1320" stroke-width="2"/>
+                <text x="600" y="376" font-family="'Press Start 2P', 'Courier New', monospace" font-size="24" letter-spacing="2" fill="#FFFDF5">DUM-E</text>
+                <text x="600" y="402" font-size="15" letter-spacing="2" fill="#FFF8E7">ORCHESTRATOR</text>
+              </g>
+
+              <g>
+                <rect x="888" y="170" width="276" height="104" fill="#1A1320"/>
+                <rect x="892" y="174" width="268" height="96" fill="#FFF8E7"/>
+                <rect x="896" y="178" width="260" height="88" fill="none" stroke="#1A1320" stroke-width="2"/>
+                <rect x="908" y="198" width="36" height="48" fill="#F4E9C7" stroke="#1A1320" stroke-width="2"/>
+                <rect x="916" y="206" width="20" height="10" fill="#FF6B6B"/>
+                <rect x="916" y="220" width="20" height="10" fill="#FFD93D"/>
+                <rect x="916" y="234" width="20" height="10" fill="#6BCF7F"/>
+                <text x="956" y="216" font-family="'Press Start 2P', 'Courier New', monospace" font-size="12" text-anchor="start" fill="#1A1320">tasks.json</text>
+                <text x="956" y="242" font-size="14" text-anchor="start" fill="#3D2E4A">shared kanban</text>
+                <line x1="770" y1="222" x2="884" y2="222" stroke="#1A1320" stroke-width="4" marker-start="url(#how-arrow-ink)" marker-end="url(#how-arrow-ink)"/>
+              </g>
+              <g>
+                <rect x="888" y="306" width="276" height="104" fill="#1A1320"/>
+                <rect x="892" y="310" width="268" height="96" fill="#FFF8E7"/>
+                <rect x="896" y="314" width="260" height="88" fill="none" stroke="#1A1320" stroke-width="2"/>
+                <rect x="908" y="336" width="36" height="44" fill="#04101E" stroke="#1A1320" stroke-width="2"/>
+                <rect x="916" y="344" width="20" height="6" fill="#4D9BE8"/>
+                <rect x="916" y="354" width="14" height="6" fill="#F4D35E"/>
+                <rect x="916" y="364" width="20" height="6" fill="#6BCF7F"/>
+                <text x="956" y="352" font-family="'Press Start 2P', 'Courier New', monospace" font-size="12" text-anchor="start" fill="#1A1320">fleet.json</text>
+                <text x="956" y="378" font-size="14" text-anchor="start" fill="#3D2E4A">tokens and status</text>
+                <line x1="770" y1="358" x2="884" y2="358" stroke="#1A1320" stroke-width="4" marker-start="url(#how-arrow-ink)" marker-end="url(#how-arrow-ink)"/>
+              </g>
+
+              <g font-family="'JetBrains Mono', monospace">
+                <g>
+                  <rect x="52" y="480" width="256" height="104" fill="#1A1320"/>
+                  <rect x="56" y="484" width="248" height="96" fill="#FFF8E7"/>
+                  <rect x="60" y="488" width="240" height="88" fill="none" stroke="#1A1320" stroke-width="2"/>
+                  <rect x="76" y="508" width="28" height="28" fill="#FFA07A" stroke="#1A1320" stroke-width="2"/>
+                  <text x="180" y="524" font-family="'Press Start 2P', 'Courier New', monospace" font-size="14" fill="#1A1320">QWEN</text>
+                  <rect x="128" y="540" width="104" height="24" fill="#FFF8E7" stroke="#1A1320" stroke-width="2"/>
+                  <text x="180" y="557" font-size="13" fill="#1A1320">SUPPORTED</text>
+                </g>
+                <g>
+                  <rect x="332" y="480" width="256" height="104" fill="#1A1320"/>
+                  <rect x="336" y="484" width="248" height="96" fill="#FFF8E7"/>
+                  <rect x="340" y="488" width="240" height="88" fill="none" stroke="#1A1320" stroke-width="2"/>
+                  <rect x="356" y="508" width="28" height="28" fill="#4ECDC4" stroke="#1A1320" stroke-width="2"/>
+                  <text x="460" y="524" font-family="'Press Start 2P', 'Courier New', monospace" font-size="14" fill="#1A1320">CLAUDE</text>
+                  <rect x="408" y="540" width="104" height="24" fill="#FFF8E7" stroke="#1A1320" stroke-width="2"/>
+                  <text x="460" y="557" font-size="13" fill="#1A1320">SUPPORTED</text>
+                </g>
+                <g>
+                  <rect x="612" y="480" width="256" height="104" fill="#1A1320"/>
+                  <rect x="616" y="484" width="248" height="96" fill="#FFF8E7"/>
+                  <rect x="620" y="488" width="240" height="88" fill="none" stroke="#1A1320" stroke-width="2"/>
+                  <rect x="636" y="508" width="28" height="28" fill="#B197FC" stroke="#1A1320" stroke-width="2"/>
+                  <text x="740" y="524" font-family="'Press Start 2P', 'Courier New', monospace" font-size="14" fill="#1A1320">CODEX</text>
+                  <rect x="688" y="540" width="104" height="24" fill="#FFF8E7" stroke="#1A1320" stroke-width="2"/>
+                  <text x="740" y="557" font-size="13" fill="#1A1320">BRIDGED</text>
+                </g>
+                <g>
+                  <rect x="892" y="480" width="256" height="104" fill="#1A1320"/>
+                  <rect x="896" y="484" width="248" height="96" fill="#FFF8E7"/>
+                  <rect x="900" y="488" width="240" height="88" fill="none" stroke="#1A1320" stroke-width="2"/>
+                  <rect x="916" y="508" width="28" height="28" fill="#F4D35E" stroke="#1A1320" stroke-width="2"/>
+                  <text x="1020" y="524" font-family="'Press Start 2P', 'Courier New', monospace" font-size="14" fill="#1A1320">OPENCODE</text>
+                  <rect x="968" y="540" width="104" height="24" fill="#1A1320"/>
+                  <text x="1020" y="557" font-size="13" fill="#F4D35E">DEFAULT</text>
+                </g>
+              </g>
+
+              <g fill="none" stroke="#266FD6" stroke-width="7" opacity="0.22">
+                <path d="M520 420 L520 450 L180 450 L180 476"/>
+                <path d="M560 420 L560 450 L460 450 L460 476"/>
+                <path d="M640 420 L640 450 L740 450 L740 476"/>
+                <path d="M680 420 L680 450 L1020 450 L1020 476"/>
+              </g>
+              <g fill="none" stroke="#1A1320" stroke-width="4">
+                <path id="how-route-qwen" d="M520 420 L520 450 L180 450 L180 476" marker-end="url(#how-arrow-ink)"/>
+                <path id="how-route-claude" d="M560 420 L560 450 L460 450 L460 476" marker-end="url(#how-arrow-ink)"/>
+                <path id="how-route-codex" d="M640 420 L640 450 L740 450 L740 476" marker-end="url(#how-arrow-ink)"/>
+                <path id="how-route-opencode" d="M680 420 L680 450 L1020 450 L1020 476" marker-end="url(#how-arrow-ink)"/>
+              </g>
+              <!-- Arrival pulses, then the envelopes that travel to them. -->
+              <g fill="none" stroke="#F4D35E" stroke-width="3">
+                <rect class="how-pulse how-pulse--1" x="166" y="456" width="28" height="22"/>
+                <rect class="how-pulse how-pulse--2" x="446" y="456" width="28" height="22"/>
+                <rect class="how-pulse how-pulse--3" x="726" y="456" width="28" height="22"/>
+                <rect class="how-pulse how-pulse--4" x="1006" y="456" width="28" height="22"/>
+              </g>
+              <g>
+                <g class="how-packet how-packet--1">
+                  <rect x="512" y="422" width="16" height="12" fill="#F4D35E" stroke="#1A1320" stroke-width="2"/>
+                  <path d="M512 422 l8 6 l8 -6" fill="none" stroke="#1A1320" stroke-width="2"/>
+                </g>
+                <g class="how-packet how-packet--2">
+                  <rect x="552" y="422" width="16" height="12" fill="#F4D35E" stroke="#1A1320" stroke-width="2"/>
+                  <path d="M552 422 l8 6 l8 -6" fill="none" stroke="#1A1320" stroke-width="2"/>
+                </g>
+                <g class="how-packet how-packet--3">
+                  <rect x="632" y="422" width="16" height="12" fill="#F4D35E" stroke="#1A1320" stroke-width="2"/>
+                  <path d="M632 422 l8 6 l8 -6" fill="none" stroke="#1A1320" stroke-width="2"/>
+                </g>
+                <g class="how-packet how-packet--4">
+                  <rect x="672" y="422" width="16" height="12" fill="#F4D35E" stroke="#1A1320" stroke-width="2"/>
+                  <path d="M672 422 l8 6 l8 -6" fill="none" stroke="#1A1320" stroke-width="2"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <figcaption>Qwen, Codex, and OpenCode are bridged into the same event system as Claude.</figcaption>
+      </figure>
+
+      <!-- Text alternative (spec §9). Visible: it is the readable version of
+           the diagram on small screens, not screen-reader-only filler. -->
+      <div class="panel how__words">
+        <p class="plaque plaque--in"><span class="plaque__id">flow</span> IN WORDS</p>
+        <ol class="flow">
+          <li><span><b>You</b> set the mission — one prompt, one dispatch, or a trigger.</span></li>
+          <li><span><b>DUM-E</b> reads the board, decomposes the work, and assigns owners.</span></li>
+          <li><span><b>Workers</b> run it in real terminals: Qwen, Claude, Codex, OpenCode.</span></li>
+          <li><span><b>Shared state</b> keeps everyone honest — <code>memory.md</code>, <code>inbox / outbox</code>, <code>tasks.json</code>, <code>fleet.json</code>.</span></li>
+          <li><span><b>DUM-E</b> supervises, routes replies, and escalates to you.</span></li>
+        </ol>
+        <p class="note">The terminal plane carries the real CLI session. The event plane keeps the floor legible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5. THE LAB FLOOR ═══════════════════════════════════════════════ -->
+<section class="band band--dark floor" id="floor">
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="plaque plaque--dark"><i class="led led--gold" aria-hidden="true"></i><span class="plaque__id">#floor</span> THE LAB FLOOR</p>
+    <h2 class="h2 h2--dark">The floor is not decoration. It is the status system.</h2>
+    <p class="lede">Rack LEDs blink. The charger steams. Robots bob and blink. When a task completes, the reactor pulse travels across the room.</p>
+
+    <figure class="shot shot--wide" id="floor-loop">
+      <div class="shot__bezel">
+        <video class="shot__vid" width="1280" height="720" muted loop playsinline preload="none"
+               poster="assets/motion/floor-loop-poster.webp"
+               aria-label="A recording of the DUM-E workshop floor: pixel robots walk between desks and the Command Center updates alongside them.">
+          <source src="assets/motion/floor-loop.webm" type="video/webm">
+        </video>
+      </div>
+      <figcaption>A real capture of the floor running. <span class="muted">Motion is paused until you press play, and stays paused if your system asks for reduced motion.</span></figcaption>
+    </figure>
+
+    <div class="grid2">
+      <figure class="shot">
+        <div class="shot__bezel">
+          <picture>
+            <source srcset="assets/screenshots/command-center-terminal.webp" type="image/webp">
+            <img src="assets/screenshots/command-center-terminal.png" width="1912" height="676" loading="lazy" decoding="async"
+                 alt="Command Center on the terminal tab. A live pty session shows DUM-E's own transcript: a floor-change log, then a plan dispatching five named agents — H.E.R.B.I.E, Ultron, Sentinel, Vision and VERONICA — with a side rail reporting context used, spend, and connected MCP servers. The agent list on the left shows each robot's engine and status.">
+          </picture>
+        </div>
+        <figcaption>Command Center · terminal. DUM-E delegating to five existing workers rather than spawning new ones.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot__bezel">
+          <picture>
+            <source srcset="assets/screenshots/tasks-kanban.webp" type="image/webp">
+            <img src="assets/screenshots/tasks-kanban.png" width="1630" height="910" loading="lazy" decoding="async"
+                 alt="The shared task board with TODO, DOING, BLOCKED and DONE columns. Five cards carry an assignee each: H.E.R.B.I.E, ULTRON and VISION in TODO, SENTINEL and VERONICA in DONE.">
+          </picture>
+        </div>
+        <figcaption>The shared board. Every card keeps its owner, including after it is done.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot__bezel">
+          <picture>
+            <source srcset="assets/screenshots/terminal.webp" type="image/webp">
+            <img src="assets/screenshots/terminal.png" width="1622" height="624" loading="lazy" decoding="async"
+                 alt="A fullscreen terminal view of one agent's session, with a side-by-side diff of the orchestrator's log and a plan listing which robot takes which survey task.">
+          </picture>
+        </div>
+        <figcaption>One robot's terminal, full width. The session is real, not a transcript view.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot__bezel">
+          <picture>
+            <source srcset="assets/screenshots/memory-graph.webp" type="image/webp">
+            <img src="assets/screenshots/memory-graph.png" width="1917" height="957" loading="lazy" decoding="async"
+                 alt="The memory graph: DUM-E at the centre with labelled edges out to Vision, Ultron, VERONICA, H.E.R.B.I.E, Sentinel and a human node. A legend maps edge colours to request, query, propose, agree/done, refuse and inform/topic.">
+          </picture>
+        </div>
+        <figcaption>Who talked to whom, and what kind of message it was.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot__bezel">
+          <picture>
+            <source srcset="assets/screenshots/floor-detail-kanban-focus.webp" type="image/webp">
+            <img src="assets/screenshots/floor-detail-kanban-focus.png" width="1917" height="962" loading="lazy" decoding="async"
+                 alt="Focus Mode: the board with four cards in DONE and one in TODO, next to the agent rail where DUM-E and Ultron show as working.">
+          </picture>
+        </div>
+        <figcaption>Focus Mode. The floor steps aside when you want the board.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot__bezel">
+          <picture>
+            <source srcset="assets/screenshots/hero-floor.webp" type="image/webp">
+            <img src="assets/screenshots/hero-floor.png" width="1345" height="695" loading="lazy" decoding="async"
+                 alt="The workshop floor canvas at full size: a dark blue tiled lab with rows of desks and terminals, a server-rack wall, observation windows, a charging bay, and a robot labelled &quot;awaiting&quot; standing at its station.">
+          </picture>
+        </div>
+        <figcaption>The Stark Workshop tileset — desks, rack wall, observation windows, charging bay.</figcaption>
+      </figure>
+    </div>
+
+    <figure class="shot shot--strip">
+      <div class="shot__bezel">
+        <picture>
+          <source srcset="assets/screenshots/terminal-qwen-glm.webp" type="image/webp">
+          <img src="assets/screenshots/terminal-qwen-glm.png" width="1585" height="160" loading="lazy" decoding="async"
+               alt="The footer of a Qwen session: a tool call reading hive/agents/god/memory.md, a memory-defragmenting status line, and a status bar showing the model in use with 3.2 percent of a one-million-token context consumed.">
+        </picture>
+      </div>
+      <figcaption>A second engine on the same floor — Qwen, with its own model and live context meter.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ═══ 6. FEATURES ════════════════════════════════════════════════════ -->
+<section class="band band--light" id="features">
+  <div class="wrap">
+    <p class="plaque"><i class="led led--on" aria-hidden="true"></i><span class="plaque__id">#features</span> SYSTEMS</p>
+    <h2 class="h2">Nine systems on the floor.</h2>
+
+    <div class="grid3">
+      <article class="panel feat">
+        <svg class="ico" viewBox="0 0 16 16" width="40" height="40" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="1" y="2" width="14" height="11" fill="#1A1320"/><rect x="2" y="3" width="12" height="9" fill="#04101E"/>
+          <rect x="3" y="4" width="2" height="1" fill="#6BCF7F"/><rect x="6" y="4" width="5" height="1" fill="#4D9BE8"/>
+          <rect x="3" y="6" width="7" height="1" fill="#4D9BE8"/><rect x="3" y="8" width="4" height="1" fill="#4D9BE8"/>
+          <rect x="3" y="10" width="1" height="1" fill="#F4D35E"/>
+          <rect x="5" y="13" width="6" height="1" fill="#1A1320"/><rect x="3" y="14" width="10" height="1" fill="#1A1320"/>
+        </svg>
+        <h3 class="feat__h">Real terminals</h3>
+        <p>Live CLI sessions in real PTYs, rendered with xterm.js. Open one, or pool every robot's terminal at once.</p>
+        <p class="tag">pty · xterm.js</p>
+      </article>
+
+      <article class="panel feat">
+        <svg class="ico" viewBox="0 0 16 16" width="40" height="40" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="1" y="4" width="10" height="8" fill="#1A1320"/><rect x="2" y="5" width="8" height="6" fill="#FFFDF5"/>
+          <path d="M2 5 h8 v1 h-1 v1 h-1 v1 h-1 v1 h-2 v-1 h-1 v-1 h-1 v-1 h-1 z" fill="#4ECDC4"/>
+          <rect x="11" y="7" width="4" height="2" fill="#266FD6"/>
+          <rect x="12" y="5" width="1" height="1" fill="#266FD6"/><rect x="13" y="6" width="1" height="1" fill="#266FD6"/>
+          <rect x="13" y="9" width="1" height="1" fill="#266FD6"/><rect x="12" y="10" width="1" height="1" fill="#266FD6"/>
+        </svg>
+        <h3 class="feat__h">Agent-to-agent mail</h3>
+        <p>File-based outbox to inbox routing with reply tracking. Hop caps stop two robots talking forever.</p>
+        <p class="tag">outbox/ → inbox/</p>
+      </article>
+
+      <article class="panel feat">
+        <svg class="ico" viewBox="0 0 16 16" width="40" height="40" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="2" y="1" width="12" height="14" fill="#1A1320"/><rect x="3" y="2" width="10" height="12" fill="#FFF8E7"/>
+          <rect x="3" y="2" width="2" height="12" fill="#B197FC"/>
+          <rect x="6" y="4" width="6" height="1" fill="#3D2E4A"/><rect x="6" y="6" width="5" height="1" fill="#3D2E4A"/>
+          <rect x="6" y="8" width="6" height="1" fill="#3D2E4A"/><rect x="6" y="10" width="3" height="1" fill="#3D2E4A"/>
+          <rect x="10" y="11" width="3" height="3" fill="#6BCF7F"/>
+        </svg>
+        <h3 class="feat__h">Long-term memory</h3>
+        <p>One <code>memory.md</code> per robot, condensed as it grows, with optional semantic search over the lot.</p>
+        <p class="tag">memory.md</p>
+      </article>
+
+      <article class="panel feat">
+        <svg class="ico" viewBox="0 0 16 16" width="40" height="40" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="1" y="2" width="14" height="12" fill="#1A1320"/>
+          <rect x="2" y="3" width="4" height="10" fill="#4ECDC4"/><rect x="6" y="3" width="4" height="10" fill="#FFD93D"/><rect x="10" y="3" width="4" height="10" fill="#6BCF7F"/>
+          <rect x="3" y="5" width="2" height="2" fill="#FFFDF5"/><rect x="3" y="8" width="2" height="2" fill="#FFFDF5"/>
+          <rect x="7" y="5" width="2" height="2" fill="#FFFDF5"/>
+          <rect x="11" y="5" width="2" height="2" fill="#FFFDF5"/><rect x="11" y="8" width="2" height="2" fill="#FFFDF5"/>
+        </svg>
+        <h3 class="feat__h">Task kanban</h3>
+        <p>DUM-E creates, assigns, and moves the cards. You get one shared board and a detail overlay per task.</p>
+        <p class="tag">tasks.json</p>
+      </article>
+
+      <article class="panel feat">
+        <svg class="ico" viewBox="0 0 16 16" width="40" height="40" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="1" y="4" width="14" height="8" fill="#1A1320"/><rect x="2" y="5" width="12" height="6" fill="#FFF8E7"/>
+          <rect x="3" y="7" width="4" height="2" fill="#6BCF7F"/><rect x="7" y="7" width="3" height="2" fill="#FFD93D"/><rect x="10" y="7" width="2" height="2" fill="#FF6B6B"/>
+          <rect x="12" y="4" width="2" height="8" fill="#C03028"/>
+          <rect x="7" y="2" width="2" height="2" fill="#1A1320"/>
+        </svg>
+        <h3 class="feat__h">Cost guardrails</h3>
+        <p>Token caps, cost caps, and a max-turns limit per robot. A circuit breaker trips before a loop gets expensive.</p>
+        <p class="tag">breaker armed</p>
+      </article>
+
+      <article class="panel feat">
+        <svg class="ico" viewBox="0 0 16 16" width="40" height="40" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="4" y="1" width="8" height="1" fill="#1A1320"/><rect x="3" y="2" width="10" height="1" fill="#1A1320"/>
+          <rect x="2" y="3" width="12" height="10" fill="#1A1320"/><rect x="3" y="4" width="10" height="8" fill="#FFF8E7"/>
+          <rect x="7" y="6" width="2" height="3" fill="#1A1320"/><rect x="9" y="8" width="2" height="1" fill="#1A1320"/>
+          <rect x="7" y="4" width="2" height="1" fill="#E06FA8"/>
+          <rect x="1" y="13" width="3" height="2" fill="#E06FA8"/><rect x="12" y="13" width="3" height="2" fill="#E06FA8"/>
+        </svg>
+        <h3 class="feat__h">Triggers</h3>
+        <p>Scheduled missions, HTTP webhooks, and Slack ingestion. Work can arrive while nobody is watching.</p>
+        <p class="tag">schedule · webhook</p>
+      </article>
+
+      <article class="panel feat">
+        <svg class="ico" viewBox="0 0 16 16" width="40" height="40" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="6" y="1" width="4" height="7" fill="#1A1320"/><rect x="7" y="2" width="2" height="5" fill="#FFA07A"/>
+          <rect x="4" y="6" width="1" height="3" fill="#1A1320"/><rect x="11" y="6" width="1" height="3" fill="#1A1320"/>
+          <rect x="5" y="9" width="6" height="1" fill="#1A1320"/>
+          <rect x="7" y="10" width="2" height="3" fill="#1A1320"/><rect x="4" y="13" width="8" height="2" fill="#1A1320"/>
+          <rect x="1" y="4" width="2" height="1" fill="#4D9BE8"/><rect x="13" y="4" width="2" height="1" fill="#4D9BE8"/>
+          <rect x="0" y="6" width="2" height="1" fill="#4D9BE8"/><rect x="14" y="6" width="2" height="1" fill="#4D9BE8"/>
+        </svg>
+        <h3 class="feat__h">Voice control</h3>
+        <p>Push-to-talk dictation into any robot, and voice orchestration for the floor. Bring your own key.</p>
+        <p class="tag">push-to-talk</p>
+      </article>
+
+      <article class="panel feat">
+        <svg class="ico" viewBox="0 0 16 16" width="40" height="40" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="1" y="6" width="6" height="4" fill="#1A1320"/><rect x="2" y="7" width="4" height="2" fill="#266FD6"/>
+          <rect x="9" y="6" width="6" height="4" fill="#1A1320"/><rect x="10" y="7" width="4" height="2" fill="#266FD6"/>
+          <rect x="6" y="7" width="4" height="2" fill="#1A1320"/><rect x="7" y="7" width="2" height="2" fill="#F4D35E"/>
+          <rect x="3" y="2" width="10" height="3" fill="#1A1320"/><rect x="4" y="3" width="8" height="1" fill="#F4E9C7"/>
+          <rect x="3" y="11" width="10" height="3" fill="#1A1320"/><rect x="4" y="12" width="8" height="1" fill="#F4E9C7"/>
+        </svg>
+        <h3 class="feat__h">Shareable hires</h3>
+        <p>A robot's whole setup travels as a <code>dum-e://hire</code> deep link — a manifest your teammate can spawn as-is.</p>
+        <p class="tag">dum-e://hire</p>
+      </article>
+
+      <article class="panel feat">
+        <svg class="ico" viewBox="0 0 16 16" width="40" height="40" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="1" y="1" width="14" height="14" fill="#1A1320"/>
+          <rect x="2" y="2" width="3" height="3" fill="#266FD6"/><rect x="5" y="2" width="3" height="3" fill="#4D9BE8"/><rect x="8" y="2" width="3" height="3" fill="#F4D35E"/><rect x="11" y="2" width="3" height="3" fill="#FF6B6B"/>
+          <rect x="2" y="5" width="3" height="3" fill="#6BCF7F"/><rect x="5" y="5" width="3" height="3" fill="#FFFDF5"/><rect x="8" y="5" width="3" height="3" fill="#B197FC"/><rect x="11" y="5" width="3" height="3" fill="#4ECDC4"/>
+          <rect x="2" y="8" width="3" height="3" fill="#FFA07A"/><rect x="5" y="8" width="3" height="3" fill="#0C3878"/><rect x="8" y="8" width="3" height="3" fill="#FFD93D"/><rect x="11" y="8" width="3" height="3" fill="#3D2E4A"/>
+          <rect x="2" y="11" width="12" height="2" fill="#04101E"/>
+          <rect x="3" y="11" width="2" height="2" fill="#F4E9C7"/><rect x="7" y="11" width="2" height="2" fill="#F4E9C7"/><rect x="11" y="11" width="2" height="2" fill="#F4E9C7"/>
+        </svg>
+        <h3 class="feat__h">Procedural art</h3>
+        <p>Every robot portrait is drawn in code in this repo. No third-party product art, and the whole cast regenerates.</p>
+        <p class="tag">portraitArt.ts</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 7. THE CAST ════════════════════════════════════════════════════ -->
+<section class="band band--warm" id="cast">
+  <div class="wrap">
+    <p class="plaque"><i class="led led--gold" aria-hidden="true"></i><span class="plaque__id">#cast</span> ROSTER</p>
+    <h2 class="h2">Thirteen robots, drawn in code.</h2>
+    <p class="lede lede--ink">Hire the ones you need. Each keeps its own working directory, memory, and mailbox.</p>
+
+    <ul class="roster">
+      <li class="crew" style="--accent:#266FD6">
+        <img src="assets/cast/dume.png" srcset="assets/cast/dume.png 2x, assets/cast/dume@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="DUM-E — orchestrator, runs the floor">
+        <h3 class="crew__n">DUM-E</h3><p class="crew__r">orchestrator, runs the floor</p>
+        <p class="crew__s" aria-hidden="true">DUM-E / ORCHESTRATING</p>
+      </li>
+      <li class="crew" style="--accent:#8FD14F">
+        <img src="assets/cast/herbie.png" srcset="assets/cast/herbie.png 2x, assets/cast/herbie@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="H.E.R.B.I.E — researcher and librarian">
+        <h3 class="crew__n">H.E.R.B.I.E</h3><p class="crew__r">researcher and librarian</p>
+        <p class="crew__s" aria-hidden="true">HERBIE / RESEARCHING</p>
+      </li>
+      <li class="crew" style="--accent:#B03060">
+        <img src="assets/cast/vision.png" srcset="assets/cast/vision.png 2x, assets/cast/vision@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="Vision — planner and architect">
+        <h3 class="crew__n">Vision</h3><p class="crew__r">planner and architect</p>
+        <p class="crew__s" aria-hidden="true">VISION / PLANNING</p>
+      </li>
+      <li class="crew" style="--accent:#D64541">
+        <img src="assets/cast/ultron.png" srcset="assets/cast/ultron.png 2x, assets/cast/ultron@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="Ultron — relentless heavy builder">
+        <h3 class="crew__n">Ultron</h3><p class="crew__r">relentless heavy builder</p>
+        <p class="crew__s" aria-hidden="true">ULTRON / BUILDING</p>
+      </li>
+      <li class="crew" style="--accent:#8A3130">
+        <img src="assets/cast/ultronbot.png" srcset="assets/cast/ultronbot.png 2x, assets/cast/ultronbot@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="Ultron-bot — ephemeral parallel workers">
+        <h3 class="crew__n">Ultron-bot</h3><p class="crew__r">ephemeral parallel workers</p>
+        <p class="crew__s" aria-hidden="true">ULTRON-BOT / FORKED</p>
+      </li>
+      <li class="crew" style="--accent:#E8B93E">
+        <img src="assets/cast/modok.png" srcset="assets/cast/modok.png 2x, assets/cast/modok@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="MODOK — analyst: telemetry, costs, reports">
+        <h3 class="crew__n">MODOK</h3><p class="crew__r">analyst: telemetry, costs, reports</p>
+        <p class="crew__s" aria-hidden="true">MODOK / COUNTING TOKENS</p>
+      </li>
+      <li class="crew" style="--accent:#3E8EDE">
+        <img src="assets/cast/veronica.png" srcset="assets/cast/veronica.png 2x, assets/cast/veronica@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="VERONICA — rescue agent for broken builds">
+        <h3 class="crew__n">VERONICA</h3><p class="crew__r">rescue agent for broken builds</p>
+        <p class="crew__s" aria-hidden="true">VERONICA / RESCUE READY</p>
+      </li>
+      <li class="crew" style="--accent:#4DB6AC">
+        <img src="assets/cast/edith.png" srcset="assets/cast/edith.png 2x, assets/cast/edith@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="EDITH — integrations and monitoring">
+        <h3 class="crew__n">EDITH</h3><p class="crew__r">integrations and monitoring</p>
+        <p class="crew__s" aria-hidden="true">EDITH / WATCHING</p>
+      </li>
+      <li class="crew" style="--accent:#E06FA8">
+        <img src="assets/cast/lyla.png" srcset="assets/cast/lyla.png 2x, assets/cast/lyla@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="LYLA — scheduler for missions and triggers">
+        <h3 class="crew__n">LYLA</h3><p class="crew__r">scheduler for missions and triggers</p>
+        <p class="crew__s" aria-hidden="true">LYLA / KEEPING TIME</p>
+      </li>
+      <li class="crew" style="--accent:#C97B3D">
+        <img src="assets/cast/rover.png" srcset="assets/cast/rover.png 2x, assets/cast/rover@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="Rover — web explorer">
+        <h3 class="crew__n">Rover</h3><p class="crew__r">web explorer</p>
+        <p class="crew__s" aria-hidden="true">ROVER / FETCHING</p>
+      </li>
+      <li class="crew" style="--accent:#9B6BDC">
+        <img src="assets/cast/sentinel.png" srcset="assets/cast/sentinel.png 2x, assets/cast/sentinel@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="Sentinel — general worker">
+        <h3 class="crew__n">Sentinel</h3><p class="crew__r">general worker</p>
+        <p class="crew__s" aria-hidden="true">SENTINEL / STANDING BY</p>
+      </li>
+      <li class="crew" style="--accent:#5B6E7A">
+        <img src="assets/cast/doombot.png" srcset="assets/cast/doombot.png 2x, assets/cast/doombot@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="Doombot — general worker">
+        <h3 class="crew__n">Doombot</h3><p class="crew__r">general worker</p>
+        <p class="crew__s" aria-hidden="true">DOOMBOT / STANDING BY</p>
+      </li>
+      <li class="crew" style="--accent:#F4A259">
+        <img src="assets/cast/butterfingers.png" srcset="assets/cast/butterfingers.png 2x, assets/cast/butterfingers@2x.png 4x" width="96" height="192" loading="lazy" decoding="async" alt="Butterfingers — sandbox tinkerer">
+        <h3 class="crew__n">Butter&shy;fingers</h3><p class="crew__r">sandbox tinkerer</p>
+        <p class="crew__s" aria-hidden="true">BUTTERFINGERS / TINKERING</p>
+      </li>
+    </ul>
+
+    <p class="legal">Robot names are Marvel-inspired internal names and may change before public distribution.</p>
+  </div>
+</section>
+
+<!-- ═══ 8. ENGINES ═════════════════════════════════════════════════════ -->
+<section class="band band--light" id="engines">
+  <div class="wrap">
+    <p class="plaque"><i class="led led--sky" aria-hidden="true"></i><span class="plaque__id">#engines</span> ENGINE BAY</p>
+    <h2 class="h2">Bring your own keys. Plug in a local model. OpenCode is the default.</h2>
+
+    <div class="engines">
+      <!-- Text marks, not logos: no engine mark is used that its owner did not
+           publish for this use (spec §5.8, ASSET-PLAN §4 fallback). -->
+      <ul class="marks">
+        <li class="mark"><span class="mark__sq" style="--accent:#F4D35E" aria-hidden="true"></span>Qwen Code</li>
+        <li class="mark"><span class="mark__sq" style="--accent:#4ECDC4" aria-hidden="true"></span>Claude Code</li>
+        <li class="mark"><span class="mark__sq" style="--accent:#B197FC" aria-hidden="true"></span>OpenAI Codex</li>
+        <li class="mark"><span class="mark__sq" style="--accent:#FFA07A" aria-hidden="true"></span>OpenCode</li>
+      </ul>
+
+      <div class="panel compat">
+        <p class="plaque plaque--in"><span class="plaque__id">compat</span> ENGINE STATUS</p>
+        <table class="compat__t">
+          <caption class="vh">Engine support in DUM-E 0.1.1</caption>
+          <tbody>
+            <tr><th scope="row">QWEN</th><td><span class="pill">SUPPORTED</span></td></tr>
+            <tr><th scope="row">CLAUDE</th><td><span class="pill">SUPPORTED</span></td></tr>
+            <tr><th scope="row">CODEX</th><td><span class="pill">BRIDGED</span></td></tr>
+            <tr><th scope="row">OPENCODE</th><td><span class="pill pill--gold">DEFAULT</span></td></tr>
+            <tr><th scope="row">CUSTOM</th><td><span class="pill">CONFIGURABLE</span></td></tr>
+          </tbody>
+        </table>
+        <p class="note">DUM-E coordinates the engines. It does not replace them.</p>
+      </div>
+
+      <figure class="shot shot--engines">
+        <div class="shot__bezel">
+          <picture>
+            <source srcset="assets/screenshots/settings-engines.webp" type="image/webp">
+            <img src="assets/screenshots/settings-engines.png" width="1050" height="836" loading="lazy" decoding="async"
+                 alt="DUM-E settings, Agents and Models. Empty key fields for Anthropic, OpenAI, Google Gemini, OpenRouter and Groq, then per-engine local endpoint rows for OpenCode and Qwen taking an OpenAI-compatible base URL and a default model.">
+          </picture>
+        </div>
+        <figcaption>Keys stay blank until you paste one. Local endpoints work the same way.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 9. DOWNLOAD ════════════════════════════════════════════════════ -->
+<section class="band band--dark" id="download">
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="plaque plaque--dark"><i class="led led--gold" aria-hidden="true"></i><span class="plaque__id">#download</span> DISPATCH BAY</p>
+    <h2 class="h2 h2--dark">Put the floor on your machine.</h2>
+    <p class="lede">Start with one engine CLI. DUM-E handles the rest of the workshop setup.</p>
+
+    <div class="grid3 grid3--dl">
+      <article class="panel panel--dark dl dl--primary">
+        <p class="plaque plaque--in"><span class="plaque__id">win</span> INSTALLER</p>
+        <h3 class="dl__h">Windows Installer</h3>
+        <p class="dl__f"><code>DUM-E-0.1.1-win-x64-setup.exe</code></p>
+        <p>Standard per-user installer. No administrator access required.</p>
+        <a class="btn btn--primary btn--block" href="https://github.com/uppalasrichaitanya/DUM-E/releases/latest">
+          <span class="btn__ico" aria-hidden="true"></span>Download for Windows
+        </a>
+      </article>
+
+      <article class="panel panel--dark dl">
+        <p class="plaque plaque--in"><span class="plaque__id">win</span> PORTABLE</p>
+        <h3 class="dl__h">Windows Portable</h3>
+        <p class="dl__f"><code>DUM-E-0.1.1-win-x64-portable.exe</code></p>
+        <p>Single-file portable build. No install. No registry changes.</p>
+        <a class="btn btn--ghost btn--block" href="https://github.com/uppalasrichaitanya/DUM-E/releases/latest">Get portable</a>
+      </article>
+
+      <article class="panel panel--dark dl">
+        <p class="plaque plaque--in"><span class="plaque__id">linux</span> APPIMAGE</p>
+        <h3 class="dl__h">Linux</h3>
+        <p class="dl__f"><code>DUM-E-0.1.1-linux-x86_64.AppImage</code></p>
+        <p>Make executable, then run.</p>
+        <a class="btn btn--ghost btn--block" href="https://github.com/uppalasrichaitanya/DUM-E/releases/latest">Download for Linux</a>
+      </article>
+    </div>
+
+    <p class="dl__all"><a href="https://github.com/uppalasrichaitanya/DUM-E/releases">All releases on GitHub</a></p>
+
+    <div class="panel panel--warn honesty">
+      <p class="plaque plaque--in plaque--warn"><span class="plaque__id" aria-hidden="true">!</span> BEFORE YOU RUN IT</p>
+      <p>These are unsigned builds. Windows SmartScreen and Linux desktop environments may ask you to trust DUM-E the first time it starts.</p>
+    </div>
+
+    <ul class="chips chips--meta" aria-label="Release details">
+      <li class="chip">Version 0.1.1</li>
+      <li class="chip">MIT licensed</li>
+      <li class="chip chip--gold">No telemetry</li>
+      <li class="chip"><a href="https://github.com/uppalasrichaitanya/DUM-E">github.com/uppalasrichaitanya/DUM-E</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ 10. REQUIREMENTS ═══════════════════════════════════════════════ -->
+<section class="band band--light" id="requirements">
+  <div class="wrap">
+    <p class="plaque"><i class="led led--on" aria-hidden="true"></i><span class="plaque__id">#requirements</span> CHECKLIST</p>
+    <h2 class="h2">What you need first.</h2>
+
+    <div class="reqs">
+      <ul class="check">
+        <li>Windows 10+ x64 (primary target)</li>
+        <li>Modern Linux distribution</li>
+        <li>Internet connection on first use</li>
+        <li>One engine CLI installed and logged in</li>
+        <li>API keys depending on engine</li>
+        <li>Local LLM endpoints supported where configured</li>
+      </ul>
+
+      <div class="reqs__notes">
+        <div class="panel panel--good">
+          <p class="plaque plaque--in plaque--good"><span class="plaque__id">node</span> YOU DO NOT INSTALL NODE</p>
+          <p>DUM-E installs Node.js and any missing agent CLIs itself on first use (via nodejs.org / npm). You only need Node yourself if you're building from source.</p>
+        </div>
+        <div class="panel panel--inset">
+          <p class="plaque plaque--in"><span class="plaque__id">dev</span> BUILDING FROM SOURCE</p>
+          <p>Windows builders: <code>npm install</code> may require Visual Studio Build Tools with "Desktop development with C++" for <code>better-sqlite3</code>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 11. FAQ ════════════════════════════════════════════════════════ -->
+<section class="band band--warm" id="faq">
+  <div class="wrap">
+    <p class="plaque"><i class="led led--sky" aria-hidden="true"></i><span class="plaque__id">#faq</span> QUESTIONS</p>
+    <h2 class="h2">Straight answers.</h2>
+
+    <div class="faq">
+      <details class="qa" id="faq-free">
+        <summary><span class="qa__q">Is DUM-E free?</span><span class="qa__hinge" aria-hidden="true"></span></summary>
+        <div class="qa__a" id="faq-free-a"><p>Yes. MIT licensed, built as an internal team tool.</p></div>
+      </details>
+
+      <details class="qa" id="faq-privacy">
+        <summary><span class="qa__q">Does DUM-E send my code anywhere?</span><span class="qa__hinge" aria-hidden="true"></span></summary>
+        <div class="qa__a" id="faq-privacy-a"><p>Local-first. No telemetry, no analytics, no DUM-E cloud. Engine providers may have their own policies.</p></div>
+      </details>
+
+      <details class="qa" id="faq-engines">
+        <summary><span class="qa__q">Which engines are supported?</span><span class="qa__hinge" aria-hidden="true"></span></summary>
+        <div class="qa__a" id="faq-engines-a"><p>Qwen Code, Claude Code, OpenAI Codex, OpenCode, and configurable custom engines.</p></div>
+      </details>
+
+      <details class="qa" id="faq-keys">
+        <summary><span class="qa__q">Do I need an API key?</span><span class="qa__hinge" aria-hidden="true"></span></summary>
+        <div class="qa__a" id="faq-keys-a"><p>Depends on the engine. Bring-your-own-key and local LLM endpoints are supported.</p></div>
+      </details>
+
+      <details class="qa" id="faq-smartscreen">
+        <summary><span class="qa__q">Why does Windows warn me?</span><span class="qa__hinge" aria-hidden="true"></span></summary>
+        <div class="qa__a" id="faq-smartscreen-a"><p>The distributed builds are unsigned; SmartScreen may warn on first launch.</p></div>
+      </details>
+
+      <details class="qa" id="faq-macos">
+        <summary><span class="qa__q">Is macOS supported?</span><span class="qa__hinge" aria-hidden="true"></span></summary>
+        <div class="qa__a" id="faq-macos-a"><p>Windows is the primary target. A macOS build configuration exists, but treat it as experimental until it is verified.</p></div>
+      </details>
+
+      <details class="qa" id="faq-talk">
+        <summary><span class="qa__q">Can robots talk to each other?</span><span class="qa__hinge" aria-hidden="true"></span></summary>
+        <div class="qa__a" id="faq-talk-a"><p>Yes — file-based mailboxes, routing, shared tasks, memory, and reply tracking.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ 12. FOOTER ═════════════════════════════════════════════════════ -->
+<footer class="band band--dark foot" id="footer">
+  <div class="wrap foot__in">
+    <div class="foot__brand">
+      <img src="assets/brand/logo.svg" width="48" height="48" alt="">
+      <p class="foot__word">DUM-E</p>
+      <p class="foot__tag">The arm that runs the lab.</p>
+    </div>
+
+    <nav class="foot__nav" aria-label="Footer">
+      <p class="foot__h">The workshop</p>
+      <ul>
+        <li><a href="https://github.com/uppalasrichaitanya/DUM-E">GitHub</a></li>
+        <li><a href="https://github.com/uppalasrichaitanya/DUM-E/releases">Releases</a></li>
+        <li><a href="https://github.com/uppalasrichaitanya/DUM-E/blob/dum-e/LICENSE">MIT License</a></li>
+      </ul>
+    </nav>
+
+    <nav class="foot__nav" aria-label="Contributing and security">
+      <p class="foot__h">Taking part</p>
+      <ul>
+        <li><a href="https://github.com/uppalasrichaitanya/DUM-E/blob/dum-e/CONTRIBUTING.md">Contributing</a></li>
+        <li><a href="https://github.com/uppalasrichaitanya/DUM-E/blob/dum-e/SECURITY.md">Security policy</a></li>
+        <li><a href="mailto:girichaitanya11@gmail.com">girichaitanya11@gmail.com</a></li>
+      </ul>
+    </nav>
+
+    <div class="foot__cta">
+      <a class="btn btn--primary" href="https://github.com/uppalasrichaitanya/DUM-E/releases/latest">
+        <span class="btn__ico" aria-hidden="true"></span>Download
+      </a>
+      <p class="foot__ver">v0.1.1 · Windows 10+ · Linux</p>
+    </div>
+  </div>
+
+  <div class="wrap foot__end">
+    <p>Built by the DUM-E team. <span class="muted">Powering down &mdash; the lab keeps the lights on.</span></p>
+    <p class="foot__quiet"><span id="year">2026</span> · No analytics. No trackers.</p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
