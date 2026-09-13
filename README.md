@@ -2,7 +2,9 @@
 
 > Spawn coding agents, give each one memory and a mailbox, and let DUM-E run the floor. Real terminals. Shared tasks. A robot floor you can watch.
 
-![The workshop floor](assets/screenshots/hero-floor.png)
+![DUM-E — The arm that runs the lab](assets/social/og.png)
+
+<video src="https://github.com/uppalasrichaitanya/DUM-E-site/releases/download/v0.1.1/floor-loop.webm" poster="assets/motion/floor-loop-poster.webp" controls muted loop playsinline width="800"></video>
 
 **Live site:** https://uppalasrichaitanya.github.io/DUM-E-site/ → https://dum-e-lab.com (soon)
 
@@ -15,6 +17,8 @@
 * **Real terminals** — one PTY per robot (xterm.js), not a chat wrapper. Every robot runs a live CLI session.
 * **Memory + mailboxes** — one `memory.md` per agent, `inbox/outbox` routed every 1.5s, shared `tasks.json` kanban.
 * **You supervise, DUM-E delegates** — the floor is the status system. Rack LEDs blink, the charger steams, robots bob and blink.
+
+![The crew — 13 robots, drawn in code](assets/cast/cast-sheet.png)
 
 ### Download v0.1.1
 
