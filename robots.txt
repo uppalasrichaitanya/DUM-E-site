@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://uppalasrichaitanya.github.io/DUM-E-site/sitemap.xml
