@@ -4,7 +4,7 @@
 
 ![DUM-E — The arm that runs the lab](assets/social/og.png)
 
-<video src="https://github.com/uppalasrichaitanya/DUM-E-site/releases/download/v0.1.1/floor-loop.webm" poster="assets/motion/floor-loop-poster.webp" controls muted loop playsinline width="800"></video>
+<video src="assets/motion/floor-loop.webm" poster="assets/motion/floor-loop-poster.webp" controls muted loop playsinline width="800"></video>
 
 **Live site:** https://uppalasrichaitanya.github.io/DUM-E-site/ → https://dum-e-lab.com (soon)
 
