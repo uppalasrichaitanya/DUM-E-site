@@ -4,11 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>DUM-E — The Agent Hub for the Lab</title>
-<meta name="description" content="DUM-E coordinates real coding-agent terminals into a local-first robot team with shared memory, mailboxes, tasks, and a visual workshop floor.">
+<title>DUM-E — Local-First Orchestrator for AI Coding Agents</title>
+<meta name="description" content="The local-first orchestrator for AI coding agents — DUM-E runs Qwen, Claude, Codex, and OpenCode as one robot team with shared tasks, memory, and mailboxes.">
 
-<!-- Canonical: PLACEHOLDER. Replace with the real host before publishing
-     (spec §11) and update og:url / og:image to match. -->
 <link rel="canonical" href="https://dum-e-lab.com/">
 
 <meta name="theme-color" content="#04101E">
@@ -21,16 +19,16 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DUM-E">
-<meta property="og:title" content="DUM-E — The Agent Hub for the Lab">
-<meta property="og:description" content="DUM-E coordinates real coding-agent terminals into a local-first robot team with shared memory, mailboxes, tasks, and a visual workshop floor.">
+<meta property="og:title" content="DUM-E — Local-First Orchestrator for AI Coding Agents">
+<meta property="og:description" content="The local-first orchestrator for AI coding agents — DUM-E runs Qwen, Claude, Codex, and OpenCode as one robot team with shared tasks, memory, and mailboxes.">
 <meta property="og:url" content="https://dum-e-lab.com/">
 <meta property="og:image" content="https://dum-e-lab.com/assets/social/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="DUM-E — the arm that runs the lab. Pixel-art workshop control system.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DUM-E — The Agent Hub for the Lab">
-<meta name="twitter:description" content="DUM-E coordinates real coding-agent terminals into a local-first robot team with shared memory, mailboxes, tasks, and a visual workshop floor.">
+<meta name="twitter:title" content="DUM-E — Local-First Orchestrator for AI Coding Agents">
+<meta name="twitter:description" content="The local-first orchestrator for AI coding agents — DUM-E runs Qwen, Claude, Codex, and OpenCode as one robot team with shared tasks, memory, and mailboxes.">
 <meta name="twitter:image" content="https://dum-e-lab.com/assets/social/og.png">
 
 <link rel="preload" href="assets/fonts/press-start-2p-latin-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -48,11 +46,95 @@
   "applicationSubCategory": "Coding agent orchestrator",
   "operatingSystem": "Windows 10+ x64, Linux",
   "softwareVersion": "0.1.1",
-  "description": "DUM-E coordinates real coding-agent terminals into a local-first robot team with shared memory, mailboxes, tasks, and a visual workshop floor.",
+  "description": "The local-first orchestrator for AI coding agents — DUM-E runs Qwen, Claude, Codex, and OpenCode as one robot team with shared tasks, memory, and mailboxes.",
+  "author": { "@type": "Organization", "name": "DUM-E team", "url": "https://dum-e-lab.com/" },
+  "screenshot": [
+    "https://dum-e-lab.com/assets/screenshots/hero-command-center.webp",
+    "https://dum-e-lab.com/assets/screenshots/hero-floor.webp",
+    "https://dum-e-lab.com/assets/screenshots/tasks-kanban.webp",
+    "https://dum-e-lab.com/assets/screenshots/memory-graph.webp",
+    "https://dum-e-lab.com/assets/screenshots/terminal-qwen-glm.webp"
+  ],
+  "featureList": [
+    "Real terminals",
+    "Agent-to-agent mail",
+    "Long-term memory",
+    "Task kanban",
+    "Cost guardrails",
+    "Triggers",
+    "Voice control",
+    "Shareable hires",
+    "Procedural art"
+  ],
+  "softwareHelp": "https://dum-e-lab.com/#faq",
   "license": "https://github.com/uppalasrichaitanya/DUM-E/blob/dum-e/LICENSE",
   "codeRepository": "https://github.com/uppalasrichaitanya/DUM-E",
   "downloadUrl": "https://github.com/uppalasrichaitanya/DUM-E-site/releases/download/v0.1.1/DUM-E-0.1.1-win-x64-setup.exe",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "DUM-E",
+  "url": "https://dum-e-lab.com/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "DUM-E",
+  "url": "https://dum-e-lab.com/",
+  "logo": "https://dum-e-lab.com/assets/brand/icon.png",
+  "sameAs": [
+    "https://github.com/uppalasrichaitanya/DUM-E",
+    "https://github.com/uppalasrichaitanya/DUM-E-site"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is DUM-E free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. MIT licensed, built as an internal team tool." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does DUM-E send my code anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Local-first. No telemetry, no analytics, no DUM-E cloud. Engine providers may have their own policies." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which engines are supported?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Qwen Code, Claude Code, OpenAI Codex, OpenCode, and configurable custom engines." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an API key?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depends on the engine. Bring-your-own-key and local LLM endpoints are supported." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Windows warn me?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The distributed builds are unsigned; SmartScreen may warn on first launch." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is macOS supported?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Windows is the primary target. A macOS build configuration exists, but treat it as experimental until it is verified." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can robots talk to each other?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — file-based mailboxes, routing, shared tasks, memory, and reply tracking." }
+    }
+  ]
 }
 </script>
 </head>

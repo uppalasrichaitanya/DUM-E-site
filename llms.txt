@@ -1,0 +1,54 @@
+# DUM-E
+
+> A local-first desktop app for Windows that turns coding-agent CLIs into a self-coordinating team of robots on a shared 2D lab floor. OpenCode is the default engine.
+
+DUM-E is an Electron app (v0.1.1, MIT licensed) for Windows 10+ x64. Every agent runs a real CLI session in a real PTY — not a chat wrapper. Each agent gets its own working directory, long-term memory, an inbox/outbox, and access to a shared task board. DUM-E is the orchestrator robot: it spawns first, reads the board, delegates to workers, routes messages, supervises, and escalates to the human, who stays in control.
+
+## Engines
+
+- **OpenCode** — the default engine
+- **Qwen Code** — supported
+- **Claude Code** — supported
+- **OpenAI Codex** — bridged
+- **Custom endpoints** — configurable; local LLM endpoints supported
+
+DUM-E coordinates the engines; it does not replace them. Bring your own keys where an engine requires them.
+
+## What it does
+
+- Real terminals — one live PTY per robot, rendered with xterm.js; open one, or pool every robot's terminal at once
+- Long-term memory — one `memory.md` per robot, condensed as it grows, with optional semantic search
+- Agent-to-agent mail — file-based outbox → inbox routing with reply tracking; hop caps stop two robots talking forever
+- Task kanban — DUM-E creates, assigns, and moves the cards on one shared board (`tasks.json`)
+- Orchestrated delegation — DUM-E spawns first, delegates work, routes messages, supervises, and escalates to you
+- Cost guardrails — token caps, cost caps, a max-turns limit per robot, and a circuit breaker
+- Triggers — scheduled missions, HTTP webhooks, and Slack ingestion
+- Voice control — push-to-talk dictation into any robot, and voice orchestration for the floor (bring your own key)
+- Shareable hires — a robot's whole setup travels as a `dum-e://hire` deep link a teammate can spawn as-is
+- Procedural art — every robot portrait is drawn in code in the repo; no third-party product art
+
+## Local-first
+
+No telemetry. No analytics. No DUM-E cloud. Your data stays on your machine; engine providers may have their own policies. Builds are unsigned — Windows SmartScreen may ask you to trust the app on first launch.
+
+## Requirements
+
+- Windows 10+ x64 (primary target)
+- Internet connection on first use
+- One engine CLI installed and logged in
+- DUM-E installs Node.js and any missing agent CLIs itself on first use; you only need Node when building from source
+- Linux: AppImage build configuration exists, but no Linux release asset is published yet
+- macOS: build configuration exists, experimental
+
+## Download (v0.1.1, Windows)
+
+- Installer: https://github.com/uppalasrichaitanya/DUM-E-site/releases/download/v0.1.1/DUM-E-0.1.1-win-x64-setup.exe
+- Portable: https://github.com/uppalasrichaitanya/DUM-E-site/releases/download/v0.1.1/DUM-E-0.1.1-win-x64-portable.exe
+
+## Links
+
+- Website: https://dum-e-lab.com/
+- Releases: https://github.com/uppalasrichaitanya/DUM-E-site/releases
+- Site and releases repo (public): https://github.com/uppalasrichaitanya/DUM-E-site
+- App source: https://github.com/uppalasrichaitanya/DUM-E (currently a private repo)
+- License: MIT
